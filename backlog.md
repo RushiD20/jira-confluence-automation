@@ -119,9 +119,9 @@ The coding agent should not be delegated tasks that require Jira access, browser
 
 ## Definition of Done
 
-- [ ] All close and reopen automation actions are configured and tested in `ARE`.
-- [ ] Idempotency and duplicate-prevention checks are working.
+- [ ] All close and reopen automation actions are configured and tested in `ARE`. “Approach 1/2/3”
+- [ ] Idempotency and duplicate-prevention checks are working. “Approach 1/2/3”
 - [ ] Failure comments and assignee notifications are functional.
-- [ ] The automation ignores non-`ARE` and non-sub-task issues correctly.
+- [ ] The automation ignores non-`ARE` and non-sub-task issues correctly. “Approach 1/2/3”
 - [ ] The rule logs successful and failed runs for review.
 - [ ] Documentation is complete and can be used by the project owner to maintain and troubleshoot the rule.
