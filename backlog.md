@@ -106,6 +106,17 @@ This backlog translates the requirements in `project_spec.md` into a concrete, e
 - [ ] Capture a final rollout checklist for moving from test validation to production enablement.
 - [ ] Review documentation for clarity and keep the instructions aligned with the actual Jira Automation configuration used in the project.
 
+## Module 19: GitHub Coding Agent Delegation
+
+The following backlog work is suitable for delegation to the GitHub coding agent because it can produce repository files, configuration drafts, test plans, validation helpers, and documentation:
+
+- Phase 2: draft the close and reopen automation logic, idempotency guards, failure-comment templates, fallback behavior, and daily-refresh safeguards.
+- Phase 3: prepare rule-builder mapping documentation, smart-value references, transition/action checklists, and configuration templates for human review.
+- Phase 4: create acceptance-test plans, test-case matrices, edge-case checklists, and scripts or fixtures that do not require live Jira credentials.
+- Phase 5: draft the configuration guide, workflow-dependency documentation, troubleshooting guide, monitoring runbook, change log, and rollout checklist.
+
+The coding agent should not be delegated tasks that require Jira access, browser-session verification, permission changes, live Jira Automation configuration, confirmation of actual workflow transitions, or production rollout approval. Those tasks require a human with access to the `ARE` project and must be validated manually before generated artifacts are used.
+
 ## Definition of Done
 
 - [ ] All close and reopen automation actions are configured and tested in `ARE`.
