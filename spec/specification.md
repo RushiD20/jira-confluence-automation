@@ -39,6 +39,8 @@ The capability must operate safely for event-driven transitions and an optional 
 
 ### Out of scope
 
+- Selecting between native Jira Automation and the React/Express/PostgreSQL application architecture. That implementation decision belongs to the technical plan and must comply with the constitution.
+- Defining Jira-specific transition IDs, transition names, status IDs, or workflow mappings. The implementation and deployment configuration MUST provide and validate suitable close and reopen transitions for each supported parent type.
 - Changes to Jira workflows, statuses, permissions, or issue types.
 - Processing issues outside project `ARE`.
 - Closing parents solely because they have no sub-tasks.
@@ -190,12 +192,12 @@ As an administrator, I want unrelated issues and transitions ignored, so that th
 - **FR-007:** The automation MUST confirm that the parent has at least one sub-task before considering closure.
 - **FR-008:** The automation MUST transition the parent only when every sub-task is in the Done status category.
 - **FR-009:** The automation MUST verify that the parent is not already in the Done status category before attempting closure.
-- **FR-010:** The automation MUST use the validated workflow transition to move the parent to `DONE`.
+- **FR-010:** The automation MUST use a configured and validated workflow transition to move the parent to the target Done status. The transition identifier and workflow mapping are implementation configuration, not feature behavior.
 
 ### Reopen behavior
 
 - **FR-011:** The automation MUST confirm that the parent is currently in the Done status category before attempting a reopen.
-- **FR-012:** The automation MUST use the validated `ARE` workflow reopen transition and target status.
+- **FR-012:** The automation MUST use a configured and validated `ARE` workflow reopen transition and target status. The transition identifier and workflow mapping are implementation configuration, not feature behavior.
 - **FR-013:** The automation MUST not attempt a reopen when no valid transition is available; it MUST follow the failure-handling behavior instead.
 
 ### Idempotency and auditability
@@ -302,10 +304,10 @@ The feature is successful when:
 
 ## 11. Dependencies and Clarifications
 
-The following items MUST be confirmed before implementation or production enablement:
+The following deployment and implementation details MUST be confirmed before production enablement:
 
-- Exact Jira workflow transition name or ID that moves an eligible parent to `DONE`.
-- Exact reopen transition name or ID and target status for parents currently in `DONE`.
+- A suitable Jira workflow transition is configured for moving each supported parent type to the Done target.
+- A suitable reopen transition and target status are configured for parents currently in Done.
 - Exact Jira Automation conditions and smart values available in the current rule builder.
 - Correct evaluation method for determining whether all parent sub-tasks are Done.
 - Jira-supported syntax for mentioning the parent assignee from the automation comment action.
