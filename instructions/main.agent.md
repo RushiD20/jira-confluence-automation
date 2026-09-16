@@ -5,5 +5,7 @@
 - 'python-best-practices.agent.md' — Write and review maintainable Python code
 - 'create-function.agent.md' — Design and implement one focused Python function
 - 'write-tests.agent.md' — Create focused, deterministic Python tests
+- 'calculate-compound-interest.agent.md' — Use the compound-interest calculation tool
+- 'use-[Build_factory].agent.md' — Use tools/Build_factory.py for the close-parent automation path
 - 'create-status-report.agent.md' — Weekly status report with fixed sections and format
 - 'write-meeting-notes.agent.md' — Extract action items and deadlines from meeting notes
