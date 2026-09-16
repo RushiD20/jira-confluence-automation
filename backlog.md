@@ -4,17 +4,17 @@ This backlog translates the requirements in `project_spec.md` into a concrete, e
 
 ## Phase 1: Setup
 
-- [ ] Confirm Jira access and project permissions for the rule actor in project `ARE`.
-- [ ] Verify the current browser session has access to `https://epam.atlassian.net` and the `ARE` project; escalate if access is still restricted.
-- [ ] Identify the parent issue types and sub-task issue type used in `ARE` and confirm which parent issues should be included.
-- [ ] Review the current `ARE` workflow and document all relevant statuses, including the Done status category and any reopen transition options.
-- [ ] Confirm the exact `DONE` transition name for parent issues and the exact reopen transition used when a parent in `DONE` is reopened.
-- [ ] Validate that the automation rule actor can browse issues, add comments, transition issues, and notify users in `ARE`.
-- [ ] Confirm the issue assignee can be mentioned and notified by Jira Automation comments.
-- [ ] Define the test parent issue and sub-task setup to use for validation before production rollout.
-- [ ] Set up a dedicated test environment or sandbox parent issue in `ARE` with several sub-tasks in different statuses.
-- [ ] Create a working list of status values and transition names for the rule builder so the smart values and conditions are mapped correctly during configuration.
-- [ ] Document the rule naming convention and rule ownership, including who will monitor execution logs and manage workflow changes.
+- [x] Confirm Jira access and project permissions for the rule actor in project `ARE`. ([#1](https://github.com/RushiD20/jira-confluence-automation/issues/1))
+- [x] Verify the current browser session has access to `https://epam.atlassian.net` and the `ARE` project; escalate if access is still restricted. ([#2](https://github.com/RushiD20/jira-confluence-automation/issues/2))
+- [x] Identify the parent issue types and sub-task issue type used in `ARE` and confirm which parent issues should be included. ([#3](https://github.com/RushiD20/jira-confluence-automation/issues/3))
+- [x] Review the current `ARE` workflow and document all relevant statuses, including the Done status category and any reopen transition options. ([#4](https://github.com/RushiD20/jira-confluence-automation/issues/4))
+- [x] Confirm the exact `DONE` transition name for parent issues and the exact reopen transition used when a parent in `DONE` is reopened. ([#5](https://github.com/RushiD20/jira-confluence-automation/issues/5))
+- [x] Validate that the automation rule actor can browse issues, add comments, transition issues, and notify users in `ARE`. ([#6](https://github.com/RushiD20/jira-confluence-automation/issues/6))
+- [x] Confirm the issue assignee can be mentioned and notified by Jira Automation comments. ([#7](https://github.com/RushiD20/jira-confluence-automation/issues/7))
+- [x] Define the test parent issue and sub-task setup to use for validation before production rollout. ([#8](https://github.com/RushiD20/jira-confluence-automation/issues/8))
+- [x] Set up a dedicated test environment or sandbox parent issue in `ARE` with several sub-tasks in different statuses. ([#9](https://github.com/RushiD20/jira-confluence-automation/issues/9))
+- [x] Create a working list of status values and transition names for the rule builder so the smart values and conditions are mapped correctly during configuration. ([#10](https://github.com/RushiD20/jira-confluence-automation/issues/10))
+- [x] Document the rule naming convention and rule ownership, including who will monitor execution logs and manage workflow changes. ([#11](https://github.com/RushiD20/jira-confluence-automation/issues/11))
 
 ## Phase 2: Core Features
 
